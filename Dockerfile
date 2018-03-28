@@ -14,7 +14,8 @@ RUN apt-get update \
     " \
  && apt-get install -y --no-install-recommends $buildDeps \
  && update-ca-certificates \
- && gem install fluent-plugin-systemd fluent-plugin-jq fluent-plugin-detect-exceptions oj \
+ && gem install fluent-plugin-systemd fluent-plugin-detect-exceptions oj \
+ && gem install fluent-plugin-jq -v 0.4.0 \
  && gem install /tmp/*.gem \
  && apt-get purge -y --auto-remove \
                   -o APT::AutoRemove::RecommendsImportant=false \
