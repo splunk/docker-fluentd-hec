@@ -1,2 +1,2 @@
 # splunk-kubernetes-logging-container
-Splunk Kubernetes logging container for Docker Hun
+Splunk Kubernetes logging container for Docker Hub
