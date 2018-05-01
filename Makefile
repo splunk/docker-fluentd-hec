@@ -1,4 +1,4 @@
-VERSION ?= 0.0.12
+VERSION ?= 0.2.0
 IMAGE_NAME ?= fluentd-splunk-hec
 # TARGET_NAME ?= gimil/${IMAGE_NAME}:${VERSION}
 TARGET_NAME ?= gimil/k8s-l:${VERSION}
