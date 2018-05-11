@@ -1,2 +1,1 @@
-# splunk-kubernetes-logging-container
-Splunk Connect for Kubernetes logging container
+# Splunk Connect for Kubernetes logging image
