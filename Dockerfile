@@ -5,23 +5,19 @@ LABEL maintainer="Gimi Liang <zliang@splunk.com>"
 # skip runtime bundler installation
 ENV FLUENTD_DISABLE_BUNDLER_INJECTION 1
 
-# expecting fluent-plugin-splunk-hec
-COPY *.gem /tmp/
-
 RUN set -e \
  && apt-get update \
  && apt-get upgrade -y \
  && apt-get install -y --no-install-recommends libjemalloc1 jq \
- && buildDeps="make gcc wget" \
+ && buildDeps="make gcc wget g++" \
  && apt-get install -y --no-install-recommends $buildDeps \
  && gem install -N fluentd -v "1.2.0" \
  && gem install -N fluent-plugin-systemd -v "0.3.1" \
- && gem install -N fluent-plugin-detect-exceptions -v "0.0.11" \
  && gem install -N fluent-plugin-concat -v "2.2.2" \
  && gem install -N fluent-plugin-prometheus -v "1.0.1" \
  && gem install -N fluent-plugin-jq -v "0.5.1" \
+ && gem install -N fluent-plugin-splunk-hec -v "1.0.0" \
  && gem install -N oj -v "3.5.1" \
- && gem install /tmp/*.gem \
  && dpkgArch="$(dpkg --print-architecture | awk -F- '{ print $NF }')" \
  && wget -O /usr/bin/dumb-init https://github.com/Yelp/dumb-init/releases/download/v1.2.1/dumb-init_1.2.1_$dpkgArch \
  && chmod +x /usr/bin/dumb-init \
