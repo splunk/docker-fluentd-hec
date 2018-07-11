@@ -11,7 +11,7 @@ RUN set -e \
  && apt-get install -y --no-install-recommends libjemalloc1 jq \
  && buildDeps="make gcc wget g++" \
  && apt-get install -y --no-install-recommends $buildDeps \
- && gem install -N fluentd -v "1.2.0" \
+ && gem install -N fluentd -v "1.2.3" \
  && gem install -N fluent-plugin-systemd -v "0.3.1" \
  && gem install -N fluent-plugin-concat -v "2.2.2" \
  && gem install -N fluent-plugin-prometheus -v "1.0.1" \
