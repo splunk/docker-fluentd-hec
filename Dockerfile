@@ -18,7 +18,6 @@ RUN apt-get update \
         fluent-plugin-jq:0.5.1 \
         fluent-plugin-splunk-hec:1.0.1 \
         oj:3.5.1 \
- && chmod +x /usr/bin/dumb-init \
  && apt-get purge -y --auto-remove \
                   -o APT::AutoRemove::RecommendsImportant=false \
                   $buildDeps \
