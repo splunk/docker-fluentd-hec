@@ -17,6 +17,7 @@ RUN set -e \
  && gem install -N fluent-plugin-prometheus -v "1.3.0" \
  && gem install -N fluent-plugin-jq -v "0.5.1" \
  && gem install -N fluent-plugin-splunk-hec -v "1.0.1" \
+ && gem install -N fluent-plugin-gcloud-pubsub-custom -v "1.3.1" \
  && gem install -N oj -v "3.5.1" \
  && dpkgArch="$(dpkg --print-architecture | awk -F- '{ print $NF }')" \
  && wget -O /usr/bin/dumb-init https://github.com/Yelp/dumb-init/releases/download/v1.2.2/dumb-init_1.2.2_$dpkgArch \
