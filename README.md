@@ -1,1 +1,3 @@
+# 6/30/2026: ARCHIVING REPO: IT'S NO LONGER MAINTAINED AND USED BY SPLUNK PRODUCT TEAM
+
 # Splunk Connect for Kubernetes logging image
